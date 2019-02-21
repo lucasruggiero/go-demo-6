@@ -118,7 +118,7 @@ func PersonServer(w http.ResponseWriter, req *http.Request) {
 	start := time.Now()
 	defer func() { recordMetrics(start, req, code) }()
 
-	logPrintf("%s request to %s\n", req.Method, req.RequestURI)
+	logPrintf("%s a request to %s\n", req.Method, req.RequestURI)
 	msg := "Everything is OK"
 	if req.Method == "PUT" {
 		name := req.URL.Query().Get("name")
