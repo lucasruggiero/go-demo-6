@@ -61,5 +61,4 @@ lint: vendor | $(PKGS) $(GOLINT) # ❷
 	done ; exit $$ret
 
 unittest: 
-    CGO_ENABLED=$(CGO_ENABLED) $(GO) test --run UnitTest -v
-
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) test --run UnitTest -v
